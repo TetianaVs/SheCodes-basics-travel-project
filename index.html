@@ -112,7 +112,7 @@
         background-size: 1300px 400px;
       }
 
-      .insider {
+      .adventure {
         font-size: 24px;
         color: rgb(113, 177, 186);
         text-align: center;
@@ -160,17 +160,35 @@
       us apprised of new developments all around the world.
     </p>
     <hr />
-    <p class="insider">
+    <p class="adventure">
       <strong>
         <em> "Are You ready for Adventure?"</em>
         <!-- Be the first to discover secret
           destinations, travel hacks, and more. Enter your email -->
       </strong>
     </p>
-    <button>Yes</button>
+    <button class = "yes">Yes, I am!</button>
 
     <img
       src="https://i.pinimg.com/564x/12/b0/49/12b049fc030281c59677006eb5d749cc.jpg"
     />
+    <script>
+        function yesButton() {
+        let name = prompt("What is your name?");
+        let email = prompt("Be the first to discover secret destinations, travel hacks, and more. Enter Your email");
+        let adventure = document.querySelector(".adventure");
+
+        if (name !=="" && email !== "") {
+          adventure.innerHTML = `Thank You, ${name}! We'll get back to you within 24 hours`;
+        } else if (name == "" && email !== "") {
+          adventure.innerHTML = `Thank You, Guest! We'll get back to you within 24 hours`;
+        } else
+          alert("Please leave your email");
+      }
+
+      let button = document.querySelector(".yes");
+      button.addEventListener("click", yesButton);
+    </script>
+    </script>
   </body>
 </html>
