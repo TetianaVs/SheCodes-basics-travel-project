@@ -12,9 +12,6 @@
       h1 {
         text-align: center;
         color: rgb(113, 177, 186);
-        /* border: 1px solid rgb(113, 177, 186);
-        border-radius: 10px;
-        border-width: 0.5mm; */
         width: 1100px;
         display: block;
         margin: 20px auto;
@@ -22,7 +19,6 @@
       }
       h2 {
         text-align: center;
-        /* border: 1px solid rgb(113, 177, 186); */
         padding: 20px 20px 5px 20px;
         font-size: 27px;
         border-radius: 10px;
@@ -35,17 +31,16 @@
         margin: 0 auto;
         max-width: 80%;
         border-radius: 30px;
-        padding: 15px;
+        padding: 15px 15px 5px 15px;
       }
 
       P {
         color: white;
         text-align: center;
         margin: 20px 25px 0.5px 10px;
+        line-height: normal;
       }
-      a {
-      }
-
+      
       button {
         display: block;
         margin: 0 auto;
@@ -57,29 +52,33 @@
         color: rgb(13, 25, 31);
         box-shadow: 5px 5px 5px rgb(41, 34, 38);
         transition: all 200ms ease-in-out;
+        text-decoration: none;
       }
 
       button:hover {
         opacity: 0.5;
         cursor: pointer;
-        color: rgb(53, 43, 48);
-        background: white;
+        color: white;
+        background: rgb(211, 126, 95);
         border: none;
       }
+
       a {
-        color: rgb(211, 126, 95);
+        color: rgb(53, 43, 48);
+
       }
       a:hover {
-        color: rgb(113, 177, 186);
+        color: white;
         text-decoration: none;
         text-decoration: underline;
       }
 
       ul {
-        color: white;
         list-style: none;
         padding: 0;
         text-align: center;
+        color: inherit;
+        
       }
       li {
         display: inline;
@@ -87,8 +86,6 @@
         padding: 15px;
         font-size: 20px;
         border-radius: 10px;
-
-        color: rgb(53, 43, 48);
         transition: all 150ms ease-and-out;
       }
 
@@ -99,6 +96,14 @@
         color: white;
       }
 
+      span {
+        font-size: 12px;
+        font-family: monospace;
+        text-align: center;
+        opacity: 0.7;
+        
+      }
+
       .block {
         border: 1px solid rgb(113, 177, 186);
         border-radius: 10px;
@@ -106,7 +111,7 @@
         width: 1100px;
         display: block;
         margin: 0 auto;
-
+        text-align:center;
         /* background: radial-gradient(993px at 0.5% 98.5%, rgb(0, 239, 247) 0%, rgb(0, 122, 147) 46.7%, rgb(0, 29, 72) 100.2%); */
         background-image: url("https://images.immediate.co.uk/production/volatile/sites/4/2009/07/GettyImages-991700104-16d04bb.jpg?quality=90&webp=true&resize=940,400");
         background-size: 1300px 400px;
@@ -119,6 +124,16 @@
         width: 1100px;
         display: block;
         margin: 20px auto;
+        font-weight: bold;
+      }
+
+      .yes {
+        
+        display: block;
+        margin: 20px auto;
+      }
+      .extra {
+          color: rgb(113, 177, 186);
       }
     </style>
   </head>
@@ -129,22 +144,23 @@
     <div class="block">
       <ul>
         <strong>
-          <li>Norway</li>
-          <li>Italy</li>
-          <li>Australia</li>
-          <li>Japan</li>
-          <li>United Kingdom</li>
-          <li>Canada</li>
+          <li> <a href = "https://www.visitnorway.com/places-to-go/" target = "_blanc"> Norway </a></li>
+          <li> <a href = "https://www.italia.it/en" target = "_blanc"> Italy </a></li>
+          <li> <a href = "https://www.australia.com/en" target = "_blanc">Australia</a></li>
+          <li> <a href = "https://www.japan.travel/en/destinations/" target = "_blanc"> Japan </a></li>
+          <li> <a href = "https://www.visitbritain.com/us/en/destinations" target = "_blanc">United Kingdom</a></li>
+          <li> <a href = "https://travel.destinationcanada.com/" target = "_blanc">Canada</a></li>
         </strong>
       </ul>
-      <button>View All Tours</button>
+      <button><a href = "https://www.lonelyplanet.com/best-in-travel" target = "_blanc">View All</a></button>
     </div>
     <hr />
-    <p>
+    <div>
+        <p>
       Our tour programs are flexible and adjustable. Your best vacation begins
       here. We have the experience and expertise to plan your
-      <a href="https://en.wikipedia.org/wiki/Travel" target="_blank"
-        ><strong> Extraordinary Experience</strong></a
+      <a href="https://en.wikipedia.org/wiki/Travel"  class = "extra" target="_blank"
+        ><strong> Extraordinary Experience.</strong></a
       >
       <br />
       Canada One Travel has a long and proud history dating back to 1984. We are
@@ -160,18 +176,16 @@
       us apprised of new developments all around the world.
     </p>
     <hr />
-    <p class="adventure">
-      <strong>
+    <div class="adventure">
         <em> "Are You ready for Adventure?"</em>
-        <!-- Be the first to discover secret
-          destinations, travel hacks, and more. Enter your email -->
-      </strong>
-    </p>
+     
     <button class = "yes">Yes, I am!</button>
-
+    </div>
     <img
       src="https://i.pinimg.com/564x/12/b0/49/12b049fc030281c59677006eb5d749cc.jpg"
     />
+    <hr />
+    <span><p>Coded by Tetiana Shevchuk</p></span>
     <script>
         function yesButton() {
         let name = prompt("What is your name?");
@@ -179,9 +193,9 @@
         let adventure = document.querySelector(".adventure");
 
         if (name !=="" && email !== "") {
-          adventure.innerHTML = `Thank You, ${name}! We'll get back to you within 24 hours`;
+          adventure.innerHTML = `Thank You, ${name}! <br /> We'll get back to you within 24 hours!`;
         } else if (name == "" && email !== "") {
-          adventure.innerHTML = `Thank You, Guest! We'll get back to you within 24 hours`;
+          adventure.innerHTML = `Thank You, Guest! <br /> We'll get back to you within 24 hours!`;
         } else
           alert("Please leave your email");
       }
