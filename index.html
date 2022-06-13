@@ -186,6 +186,23 @@
     />
     <hr />
     <span><p>Coded by Tetiana Shevchuk</p></span>
+     <script>
+        function yesButton() {
+        let name = prompt("What is your name?");
+        let email = prompt("Be the first to discover secret destinations, travel hacks, and more. Enter Your email");
+        let adventure = document.querySelector(".adventure");
+
+        if (name !=="" && email !== "") {
+          adventure.innerHTML = `<em>Thank You, ${name}! <br /> We'll get back to you within 24 hours!</em>`;
+        } else if (name == "" && email !== "") {
+          adventure.innerHTML = `<em>Thank You, Guest! <br /> We'll get back to you within 24 hours!</em>`;
+        } else
+          alert("Please, leave your email");
+      }
+
+      let button = document.querySelector(".yes");
+      button.addEventListener("click", yesButton);
+    </script>
    
   </body>
 </html>
