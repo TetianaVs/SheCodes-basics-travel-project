@@ -104,7 +104,7 @@
         
       }
 
-      .block {
+      .countries {
         border: 1px solid rgb(113, 177, 186);
         border-radius: 10px;
         padding: 10px;
@@ -141,7 +141,7 @@
     <h1><em>Adventure Travel</em></h1>
     <hr />
     <h2>Best destinations to explore</h2>
-    <div class="block">
+    <div class="countries">
       <ul>
         <strong>
           <li> <a href = "https://www.visitnorway.com/places-to-go/" target = "_blanc"> Norway </a></li>
@@ -163,15 +163,15 @@
         ><strong> Extraordinary Experience.</strong></a
       >
       <br />
-      Canada One Travel has a long and proud history dating back to 1984. We are
-      an award winning travel company in North America. We have the experience
+      <strong>Adventure Travel</strong> has a long and proud history dating back to 1984. We are
+      an award winning travel company in Europe. We have the experience
       and expertise to plan your Extraordinary Experience, anywhere in the world
       with service and care that is above and beyond your expectations. We have
       more than half a century’s combined solid experience in travelling, and
       have earned the reputation as being the experts and professionals in the
       travel industry. Throughout the years, we have built an excellent rapport
       with government tourist boards, airlines, hotels and the travel agency
-      community. Our experienced management team in Canada provide expert
+      community. Our experienced management team provide expert
       pre-tour planning assistance, while our onsite professionals overseas keep
       us apprised of new developments all around the world.
     </p>
@@ -182,27 +182,10 @@
     <button class = "yes">Yes, I am!</button>
     </div>
     <img
-      src="https://i.pinimg.com/564x/12/b0/49/12b049fc030281c59677006eb5d749cc.jpg"
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/962/original/12b049fc030281c59677006eb5d749cc.jpg?1655057556"
     />
     <hr />
     <span><p>Coded by Tetiana Shevchuk</p></span>
-    <script>
-        function yesButton() {
-        let name = prompt("What is your name?");
-        let email = prompt("Be the first to discover secret destinations, travel hacks, and more. Enter Your email");
-        let adventure = document.querySelector(".adventure");
-
-        if (name !=="" && email !== "") {
-          adventure.innerHTML = `Thank You, ${name}! <br /> We'll get back to you within 24 hours!`;
-        } else if (name == "" && email !== "") {
-          adventure.innerHTML = `Thank You, Guest! <br /> We'll get back to you within 24 hours!`;
-        } else
-          alert("Please leave your email");
-      }
-
-      let button = document.querySelector(".yes");
-      button.addEventListener("click", yesButton);
-    </script>
-    </script>
+   
   </body>
 </html>
